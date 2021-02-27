@@ -1,0 +1,37 @@
+.box {
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   height: 50vh; /* vh = 화면의 퍼센트를 의미 */
+   /* width: 100vw; */
+}
+.box__item {
+   border-style: solid;
+   width: 12rem;
+}
+
+.buttonBox {
+   display: flex;
+   width: 80vw;
+   /* justify-content: center; */
+}
+.button {
+   margin-left: auto;
+}
+
+/* https://studiomeal.com/archives/197 */
+
+/* display를 flex로 주었으면 height값이나 width값을 설정해주어야한다. */
+
+/* rem 정의
+rem은 html 태그의 font-size값을 1rem으로 가진다. 
+<html>태그의 font-size값을 정하면 그것이 곧 1rem이 된다.
+만약 font-size값이 정해져 있지 않다면 1rem = 16px */
+
+/* vw,vh  
+ 
+vh (vertical height) 높이값의 100분의 1의 단위이다. 예를들어, 브라우저 높이값이 900px일때, 1vh는 9px이라는 뜻이 된다. 
+
+vw (vertical width) vh와 유사하게 뷰포트의 너비값이 750px이면 1vw는 7.5px이 됩니다.
+
+*/

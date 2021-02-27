@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+
+      <link rel="stylesheet" href="flexbox.css" />
+   </head>
+   <body>
+      <div class="box">
+         <div class="box__item">box1</div>
+         <div class="box__item">box2</div>
+         <div class="box__item">box3</div>
+         <!-- <input type="button" value="버튼" /> -->
+      </div>
+      <div class="buttonBox">
+         <button class="button">버튼</button>
+      </div>
+   </body>
+</html>
+
+<!-- BEM기법
+Block-name__Element-name --Modifier(속성.수식어) -->
+
+<!-- <ul class="tab">
+    <li class="tab__item tab__item--focused">탭 01</li>
+    <li class="tab__item">탭 02</li>
+    <li class="tab__item">탭 03</li>
+  </ul> -->
+
+<!-- 잘못된사용방법 -->
+
+<!-- <form class="search-form">
+    <div class="search-form__content">
+        <input class="search-form__content__input"/>
+        <button class="search-form__content__button">Search</button>
+    </div>
+  </form> -->
+
+<!-- 알맞게 사용한 방법 -->
+<!-- <form class="search-form">
+    <div class="search-form__content">
+        <input class="search-form__input"/>
+        <button class="search-form__button">Search</button>
+    </div>
+  </form> -->
