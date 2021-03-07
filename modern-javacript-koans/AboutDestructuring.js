@@ -39,4 +39,94 @@ function foo10(a, last, ...rest) {
    //리턴문 안에서는 spread syntax를 사용할 수 없다.
 }
 
-console.log(foo10(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13));
+// console.log(foo10(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13));
+
+const obj = { name: "kim coding", age: 28, city: "seoul" };
+// const name = "coding kim";
+// const age = 50;
+
+// const person = {
+//    name,
+//    age,
+//    city: "seoul",
+// };
+
+//let { name, age } = obj;
+// console.log(person);
+// console.log(age);
+
+let { name, ...age } = obj;
+
+console.log(name);
+console.log(age);
+
+//Overwriting에 관한 문제
+// it("rest/spread 문법을 객체 분해에 적용할 수 있습니다 #3", () => {
+//    const user = {
+//       name: "김코딩",
+//       company: {
+//          name: "Code States",
+//          department: "Development",
+//          role: {
+//             name: "Software Engineer",
+//          },
+//       },
+//       age: 35,
+//    };
+//    //restParameter 다음에 쉼표 사용이 가능하다? ===> 객체는 덮어써지는것(overwriting)이 가능하다.
+//    const changedUser = {
+//       ...user,
+//       name: "박해커",
+//       age: 20,
+//    };
+
+//    const overwriteChanges = {
+//       name: "박해커",
+//       age: 20,
+//       ...user,
+//    };
+//    //공부해볼 것
+//    const changedDepartment = {
+//       ...user,
+//       company: {
+//          ...user.company,
+//          department: "Marketing",
+//       },
+//    };
+
+//    expect(changedUser).to.eql({
+//       name: "박해커",
+//       company: {
+//          name: "Code States",
+//          department: "Development",
+//          role: {
+//             name: "Software Engineer",
+//          },
+//       },
+//       age: 20,
+//    });
+
+//    expect(overwriteChanges).to.eql({
+//       name: "김코딩",
+//       company: {
+//          name: "Code States",
+//          department: "Development",
+//          role: {
+//             name: "Software Engineer",
+//          },
+//       },
+//       age: 35,
+//    });
+
+//    expect(changedDepartment).to.eql({
+//       name: "김코딩",
+//       company: {
+//          name: "Code States",
+//          department: "Marketing",
+//          role: {
+//             name: "Software Engineer",
+//          },
+//       },
+//       age: 35,
+//    });
+// });
