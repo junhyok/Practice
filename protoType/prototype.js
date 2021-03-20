@@ -32,8 +32,8 @@ SmartPhone.prototype.calling = function () {
 let Iphone = function (name, color, weight) {
    //    this.price = price;
    //상속받는 쪽에서 this 설정을 해줘야한다. 안해주면 this가 undefined가 나와서 데이터를 못 가져온다.
-   SmartPhone.call(this, name, color, weight);
-   //    console.log("")
+   //SmartPhone.call(this, name, color, weight);
+   SmartPhone.apply(this, arguments);
 };
 //상속
 Iphone.prototype = Object.create(SmartPhone.prototype); // extends
@@ -46,7 +46,7 @@ Iphone.prototype.text = function () {
 // function Galaxy(name,color,weight,)
 let iphoneX = new Iphone("iphoneX", "black", "0.3kg");
 iphoneX.calling();
-console.log(iphoneX.constructor);
+console.log(iphoneX.name);
 console.log(iphoneX);
 
 //console.log(iphoneX.calling());
